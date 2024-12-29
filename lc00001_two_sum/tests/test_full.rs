@@ -25,7 +25,7 @@ fn test_from_json() {
         println!("Running test: {}", test_case.test_name);
 
         // Execute both solutions
-        let result_hash = two_sum_hash_map(&test_case.nums, test_case.target);
+        let result_hash = two_sum_hash_map(test_case.nums, test_case.target);
 
         match test_case.expected {
             Some(expected_pair) => {
