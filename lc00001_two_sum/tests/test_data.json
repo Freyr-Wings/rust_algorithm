@@ -1,0 +1,21 @@
+[
+    {
+      "test_name": "found_pair",
+      "nums": [2, 7, 11, 15],
+      "target": 9,
+      "expected": [0, 1]
+    },
+    {
+      "test_name": "no_pair_found",
+      "nums": [1, 2, 3],
+      "target": 7,
+      "expected": null
+    },
+    {
+      "test_name": "multiple_valid_pairs",
+      "nums": [3, 3, 2, 4],
+      "target": 6,
+      "expected": [0, 1]
+    }
+  ]
+  

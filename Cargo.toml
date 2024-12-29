@@ -1,0 +1,4 @@
+[workspace]
+members = [
+    "lc00001_two_sum"
+]

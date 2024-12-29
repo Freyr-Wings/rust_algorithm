@@ -1,0 +1,60 @@
+# .github/workflows/rust.yml
+
+name: Rust Algorithms Full Tests
+
+on:
+  # Triggers the workflow on push or pull request events
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      # You can define a matrix of Rust versions and operating systems if needed
+      # For simplicity, we're using a single Rust version and OS here
+      matrix:
+        rust: [stable]
+
+    steps:
+      # 1. Check out the repository code
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # 2. Set up Rust toolchain
+      - name: Set up Rust
+        uses: actions/setup-rust@v3
+        with:
+          rust-version: ${{ matrix.rust }}
+          # Optionally, you can specify other toolchain components or targets
+
+      # 3. Cache Cargo registry
+      - name: Cache Cargo registry
+        uses: actions/cache@v3
+        with:
+          path: ~/.cargo/registry
+          key: ${{ runner.os }}-cargo-registry-${{ hashFiles('**/Cargo.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-cargo-registry-
+
+      # 4. Cache Cargo index
+      - name: Cache Cargo index
+        uses: actions/cache@v3
+        with:
+          path: ~/.cargo/git
+          key: ${{ runner.os }}-cargo-git-${{ hashFiles('**/Cargo.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-cargo-git-
+
+      # 5. Build the project
+      - name: Build
+        run: cargo build --workspace --verbose
+
+      # 6. Run tests
+      - name: Run tests
+        run: cargo test --workspace --verbose
