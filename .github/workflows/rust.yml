@@ -12,49 +12,22 @@ on:
   workflow_dispatch:
 
 jobs:
-  build-and-test:
+  test:
+    name: cargo test
     runs-on: ubuntu-latest
-
-    strategy:
-      # You can define a matrix of Rust versions and operating systems if needed
-      # For simplicity, we're using a single Rust version and OS here
-      matrix:
-        rust: [stable]
-
     steps:
-      # 1. Check out the repository code
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v4
+      - uses: actions-rust-lang/setup-rust-toolchain@v1
+      - run: cargo test --all-features
 
-      # 2. Set up Rust toolchain
-      - name: Set up Rust
-        uses: actions/setup-rust@v3
+  formatting:
+    name: cargo fmt
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # Ensure rustfmt is installed and setup problem matcher
+      - uses: actions-rust-lang/setup-rust-toolchain@v1
         with:
-          rust-version: ${{ matrix.rust }}
-          # Optionally, you can specify other toolchain components or targets
-
-      # 3. Cache Cargo registry
-      - name: Cache Cargo registry
-        uses: actions/cache@v3
-        with:
-          path: ~/.cargo/registry
-          key: ${{ runner.os }}-cargo-registry-${{ hashFiles('**/Cargo.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-cargo-registry-
-
-      # 4. Cache Cargo index
-      - name: Cache Cargo index
-        uses: actions/cache@v3
-        with:
-          path: ~/.cargo/git
-          key: ${{ runner.os }}-cargo-git-${{ hashFiles('**/Cargo.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-cargo-git-
-
-      # 5. Build the project
-      - name: Build
-        run: cargo build --workspace --verbose
-
-      # 6. Run tests
-      - name: Run tests
-        run: cargo test --workspace --verbose
+          components: rustfmt
+      - name: Rustfmt Check
+        uses: actions-rust-lang/rustfmt@v1
