@@ -1,0 +1,7 @@
+[
+  {
+    "test_name": "SingleCharacter",
+    "s": "abc",
+    "expected": 3
+  }
+]
