@@ -1,13 +1,14 @@
-use lc00003_no_repeat_char::*;
+use lc00004_median_of_arrays::*;
 use serde_json::Value;
 
 pub fn test_one(v: &Value) {
     let name = v["test_name"].as_str().unwrap();
     println!("Running test: {}", name);
-    let s = v["s"].as_str().unwrap();
-    let expected = v["expected"].as_i64().unwrap();
-    let result = length_of_longest_substring(s.to_string());
-    assert_eq!(result as i64, expected);
+    let nums1 = v["nums1"].as_array().unwrap().iter().map(|vv|vv.as_i64().unwrap() as i32).collect();
+    let nums2 = v["nums2"].as_array().unwrap().iter().map(|vv|vv.as_i64().unwrap() as i32).collect();
+    let expected = v["expected"].as_f64().unwrap();
+    let result = find_median_sorted_arrays(nums1, nums2);
+    assert_eq!(result as f64, expected);
 }
 
 #[test]

@@ -1,6 +1,6 @@
 [
   {
-    "test_name": "SingleCharacter",
+    "test_name": "SimpleCase",
     "s": "abc",
     "expected": 3
   }

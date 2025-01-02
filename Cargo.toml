@@ -3,6 +3,7 @@ members = [
     "basic_data_structures", "basic_test_utilities",
     "lc00001_two_sum", 
     "lc00002_add_two_nums", 
-    "lc00003_no_repeat_char",
+    "lc00003_no_repeat_char", 
+    "lc00004_median_of_arrays",
 ]
 resolver = "2"
