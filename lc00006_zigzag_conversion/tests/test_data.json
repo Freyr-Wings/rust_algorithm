@@ -1,0 +1,74 @@
+[
+  {
+    "test_name": "SimpleCase1",
+    "s": "ba",
+    "num_rows": 2,
+    "expected": "ba"
+  },
+  {
+    "test_name": "SingleCharacterString",
+    "s": "A",
+    "num_rows": 3,
+    "expected": "A"
+  },
+  {
+    "test_name": "AllCharactersSame",
+    "s": "aaaaaa",
+    "num_rows": 2,
+    "expected": "aaaaaa"
+  },
+  {
+    "test_name": "ClassicExampleRows3",
+    "s": "PAYPALISHIRING",
+    "num_rows": 3,
+    "expected": "PAHNAPLSIIGYIR"
+  },
+  {
+    "test_name": "ClassicExampleRows4",
+    "s": "PAYPALISHIRING",
+    "num_rows": 4,
+    "expected": "PINALSIGYAHRPI"
+  },
+  {
+    "test_name": "AllRowsGreaterThanLength",
+    "s": "Hello",
+    "num_rows": 10,
+    "expected": "Hello"
+  },
+  {
+    "test_name": "SingleRow",
+    "s": "ABCDEFGHI",
+    "num_rows": 1,
+    "expected": "ABCDEFGHI"
+  },
+  {
+    "test_name": "EqualLengthAndRows",
+    "s": "ABCD",
+    "num_rows": 4,
+    "expected": "ABCD"
+  },
+  {
+    "test_name": "MoreRowsThanChars",
+    "s": "Hi",
+    "num_rows": 5,
+    "expected": "Hi"
+  },
+  {
+    "test_name": "EmptyString",
+    "s": "",
+    "num_rows": 3,
+    "expected": ""
+  },
+  {
+    "test_name": "TypicalSmallExample",
+    "s": "ABCDE",
+    "num_rows": 3,
+    "expected": "AEBDC"
+  },
+  {
+    "test_name": "HelloWorldRows3",
+    "s": "HelloWorld",
+    "num_rows": 3,
+    "expected": "HolelWrdlo"
+  }
+]

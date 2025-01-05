@@ -1,9 +1,11 @@
 [workspace]
 members = [ 
     "basic_data_structures", "basic_test_utilities",
+    "lc_project_generator",
     "lc00001_two_sum", 
     "lc00002_add_two_nums", 
     "lc00003_no_repeat_char", 
-    "lc00004_median_of_arrays", "lc00005_longest_palindromic_str",
+    "lc00004_median_of_arrays", 
+    "lc00005_longest_palindromic_str", "lc00006_zigzag_conversion",
 ]
 resolver = "2"
