@@ -1,0 +1,77 @@
+[
+  {
+    "test_name": "SingleDigitPositive",
+    "input": 2,
+    "expected": 2
+  },
+  {
+    "test_name": "SingleDigitNegative",
+    "input": -8,
+    "expected": -8
+  },
+  {
+    "test_name": "TwoDigitsPositive",
+    "input": 12,
+    "expected": 21
+  },
+  {
+    "test_name": "TwoDigitsNegative",
+    "input": -12,
+    "expected": -21
+  },
+  {
+    "test_name": "TrailingZeroPositive",
+    "input": 10,
+    "expected": 1
+  },
+  {
+    "test_name": "TrailingZeroNegative",
+    "input": -90,
+    "expected": -9
+  },
+  {
+    "test_name": "MultipleZeroesInBetween",
+    "input": 10020,
+    "expected": 2001
+  },
+  {
+    "test_name": "MultipleZeroesInBetweenNegative",
+    "input": -20010,
+    "expected": -1002
+  },
+  {
+    "test_name": "ZeroCase",
+    "input": 0,
+    "expected": 0
+  },
+  {
+    "test_name": "LargePositiveWithinRange",
+    "input": 123456789,
+    "expected": 987654321
+  },
+  {
+    "test_name": "LargeNegativeWithinRange",
+    "input": -123456789,
+    "expected": -987654321
+  },
+  {
+    "test_name": "OverflowPositive",
+    "input": 1534236469,
+    "expected": 0
+  },
+  {
+    "test_name": "OverflowNegative",
+    "input": -1563847412,
+    "expected": 0
+  },
+  {
+    "test_name": "BoundaryMinInt",
+    "input": -2147483648,
+    "expected": 0
+  },
+  {
+    "test_name": "BoundaryMaxInt",
+    "input": 2147483647,
+    "expected": 0
+  }
+]
