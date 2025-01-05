@@ -1,0 +1,152 @@
+[
+  {
+    "test_name": "SimpleOddLengthPalindrome",
+    "s": "babad",
+    "expected": "bab"
+  },
+  {
+    "test_name": "SimpleEvenLengthPalindrome",
+    "s": "cbbd",
+    "expected": "bb"
+  },
+  {
+    "test_name": "SingleCharacter",
+    "s": "a",
+    "expected": "a"
+  },
+  {
+    "test_name": "EmptyString",
+    "s": "",
+    "expected": ""
+  },
+  {
+    "test_name": "AllCharactersSame",
+    "s": "aaaaa",
+    "expected": "aaaaa"
+  },
+  {
+    "test_name": "NoPalindromeLongerThanOne",
+    "s": "abcde",
+    "expected": "a"
+  },
+  {
+    "test_name": "PalindromeAtStart",
+    "s": "racecarxyz",
+    "expected": "racecar"
+  },
+  {
+    "test_name": "PalindromeAtEnd",
+    "s": "xyzracecar",
+    "expected": "racecar"
+  },
+  {
+    "test_name": "PalindromeInMiddle",
+    "s": "xyzracecaryz",
+    "expected": "racecar"
+  },
+  {
+    "test_name": "MultipleLongestPalindromes",
+    "s": "abacdfgdcaba",
+    "expected": "aba"
+  },
+  {
+    "test_name": "EvenLengthMultiplePalindromes",
+    "s": "abccbaefggfe",
+    "expected": "abccba"
+  },
+  {
+    "test_name": "MixedCaseCharacters",
+    "s": "AbaBaba",
+    "expected": "baBab"
+  },
+  {
+    "test_name": "SpecialCharacters",
+    "s": "a@#@a",
+    "expected": "a@#@a"
+  },
+  {
+    "test_name": "NumericCharacters",
+    "s": "123454321",
+    "expected": "123454321"
+  },
+  {
+    "test_name": "LongStringSinglePalindrome",
+    "s": "abbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbba",
+    "expected": "abbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbba"
+  },
+  {
+    "test_name": "LongStringNoLongPalindrome",
+    "s": "abcdefghijklmnopqrstuvwxyz1234567890",
+    "expected": "a"
+  },
+  {
+    "test_name": "PalindromeWithMixedAlphanumerics",
+    "s": "1a2b2a1",
+    "expected": "1a2b2a1"
+  },
+  {
+    "test_name": "AllUniqueCharacters",
+    "s": "abcdefg",
+    "expected": "a"
+  },
+  {
+    "test_name": "TwoCharacterPalindrome",
+    "s": "aa",
+    "expected": "aa"
+  },
+  {
+    "test_name": "TwoCharacterNonPalindrome",
+    "s": "ab",
+    "expected": "a"
+  },
+  {
+    "test_name": "PalindromeWithRepeatingCharacters",
+    "s": "aaabaaa",
+    "expected": "aaabaaa"
+  },
+  {
+    "test_name": "ComplexPalindrome",
+    "s": "forgeeksskeegfor",
+    "expected": "geeksskeeg"
+  },
+  {
+    "test_name": "PalindromeWithSymbols",
+    "s": "madam@#@madam",
+    "expected": "madam@#@madam"
+  },
+  {
+    "test_name": "PalindromeWithNewline",
+    "s": "abc\ncba",
+    "expected": "abc\ncba"
+  },
+  {
+    "test_name": "PalindromeWithTab",
+    "s": "a\tb\ta",
+    "expected": "a\tb\ta"
+  },
+  {
+    "test_name": "PalindromeEntireString",
+    "s": "noon",
+    "expected": "noon"
+  },
+  {
+    "test_name": "MultipleSameLengthPalindromes",
+    "s": "abaxyzzyxf",
+    "expected": "xyzzyx"
+  },
+  {
+    "test_name": "PalindromeWithUpperAndLowerCase",
+    "s": "MadAm",
+    "expected": "M"
+  },
+  {
+    "test_name": "SingleRepeatedCharacter",
+    "s": "bbbb",
+    "expected": "bbbb"
+  },
+  {
+    "test_name": "PalindromeWithNumbersAndLetters",
+    "s": "a1b2b1a",
+    "expected": "a1b2b1a"
+  }
+]

@@ -1,5 +1,10 @@
 # rust_algorithm
 
+## Initialization
+
+```rust
+cargo new awesome_lib --lib --edition 2021
+```
 
 
 

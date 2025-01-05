@@ -4,6 +4,6 @@ members = [
     "lc00001_two_sum", 
     "lc00002_add_two_nums", 
     "lc00003_no_repeat_char", 
-    "lc00004_median_of_arrays",
+    "lc00004_median_of_arrays", "lc00005_longest_palindromic_str",
 ]
 resolver = "2"

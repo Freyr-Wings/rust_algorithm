@@ -1,14 +1,13 @@
-use lc00004_median_of_arrays::*;
+use lc00005_longest_palindromic_str::*;
 use serde_json::Value;
 
 pub fn test_one(v: &Value) {
     let name = v["test_name"].as_str().unwrap();
     println!("Running test: {}", name);
-    let nums1 = serde_json::from_value(v["nums1"].clone()).unwrap();
-    let nums2 = serde_json::from_value(v["nums2"].clone()).unwrap();
-    let expected = v["expected"].as_f64().unwrap();
-    let result = find_median_sorted_arrays(nums1, nums2);
-    assert_eq!(result as f64, expected);
+    let s = serde_json::from_value(v["s"].clone()).unwrap();
+    let expected = v["expected"].as_str().unwrap();
+    let result = longest_palindrome(s);
+    assert_eq!(result, expected);
 }
 
 #[test]
