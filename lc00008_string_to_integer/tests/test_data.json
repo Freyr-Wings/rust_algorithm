@@ -1,0 +1,152 @@
+[
+  {
+    "test_name": "Simple Positive Number",
+    "s": "123",
+    "expected": 123
+  },
+  {
+    "test_name": "Single Digit",
+    "s": "5",
+    "expected": 5
+  },
+  {
+    "test_name": "Leading Zeros",
+    "s": "000001234",
+    "expected": 1234
+  },
+  {
+    "test_name": "Negative Number",
+    "s": "-42",
+    "expected": -42
+  },
+  {
+    "test_name": "Positive Sign",
+    "s": "+47",
+    "expected": 47
+  },
+  {
+    "test_name": "Leading Whitespace",
+    "s": "   56",
+    "expected": 56
+  },
+  {
+    "test_name": "Leading Whitespace Negative",
+    "s": "   -890",
+    "expected": -890
+  },
+  {
+    "test_name": "Whitespace Plus Sign",
+    "s": "  +31",
+    "expected": 31
+  },
+  {
+    "test_name": "Empty String",
+    "s": "",
+    "expected": 0
+  },
+  {
+    "test_name": "Whitespace Only",
+    "s": "     ",
+    "expected": 0
+  },
+  {
+    "test_name": "Alphanumeric (starts with digits)",
+    "s": "4193 with words",
+    "expected": 4193
+  },
+  {
+    "test_name": "Alphanumeric (starts with letters)",
+    "s": "words and 987",
+    "expected": 0
+  },
+  {
+    "test_name": "Decimal Number (truncate)",
+    "s": "3.14",
+    "expected": 3
+  },
+  {
+    "test_name": "Negative Decimal (truncate)",
+    "s": "-3.99",
+    "expected": -3
+  },
+  {
+    "test_name": "Only Sign -",
+    "s": "-",
+    "expected": 0
+  },
+  {
+    "test_name": "Only Sign +",
+    "s": "+",
+    "expected": 0
+  },
+  {
+    "test_name": "Multiple Signs",
+    "s": "++1",
+    "expected": 0
+  },
+  {
+    "test_name": "Multiple Signs Variation",
+    "s": "+-12",
+    "expected": 0
+  },
+  {
+    "test_name": "Partial + Sign with number",
+    "s": "+-2",
+    "expected": 0
+  },
+  {
+    "test_name": "Large Positive Overflow",
+    "s": "99999999999999999999999999",
+    "expected": 2147483647
+  },
+  {
+    "test_name": "Large Negative Overflow",
+    "s": "-99999999999999999999999999",
+    "expected": -2147483648
+  },
+  {
+    "test_name": "Exactly INT_MAX",
+    "s": "2147483647",
+    "expected": 2147483647
+  },
+  {
+    "test_name": "Exactly INT_MIN",
+    "s": "-2147483648",
+    "expected": -2147483648
+  },
+  {
+    "test_name": "Overflow Just Above INT_MAX",
+    "s": "2147483648",
+    "expected": 2147483647
+  },
+  {
+    "test_name": "Underflow Just Below INT_MIN",
+    "s": "-2147483649",
+    "expected": -2147483648
+  },
+  {
+    "test_name": "Space Between Sign and Number",
+    "s": "- 13",
+    "expected": 0
+  },
+  {
+    "test_name": "Sign Followed By Non-Digit",
+    "s": "+ a123",
+    "expected": 0
+  },
+  {
+    "test_name": "String Starts With Dot",
+    "s": ".123",
+    "expected": 0
+  },
+  {
+    "test_name": "Mixed Letters and Digits Before Whitespace",
+    "s": "12xy 34",
+    "expected": 12
+  },
+  {
+    "test_name": "Multiple Leading Spaces and Sign",
+    "s": "     +42  ",
+    "expected": 42
+  }
+]

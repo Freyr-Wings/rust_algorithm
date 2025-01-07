@@ -6,6 +6,6 @@ members = [
     "lc00002_add_two_nums", 
     "lc00003_no_repeat_char", 
     "lc00004_median_of_arrays", 
-    "lc00005_longest_palindromic_str", "lc00006_zigzag_conversion", "lc00007_reverse_integer",
+    "lc00005_longest_palindromic_str", "lc00006_zigzag_conversion", "lc00007_reverse_integer", "lc00008_string_to_integer",
 ]
 resolver = "2"
