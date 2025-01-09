@@ -1,0 +1,102 @@
+[
+  {
+    "test_name": "Zero",
+    "x": 0,
+    "expected": true
+  },
+  {
+    "test_name": "Single Digit Positive (1)",
+    "x": 1,
+    "expected": true
+  },
+  {
+    "test_name": "Single Digit Positive (9)",
+    "x": 9,
+    "expected": true
+  },
+  {
+    "test_name": "Single Digit Negative (-1)",
+    "x": -1,
+    "expected": false
+  },
+  {
+    "test_name": "Two Digits Palindrome (11)",
+    "x": 11,
+    "expected": true
+  },
+  {
+    "test_name": "Two Digits Not Palindrome (12)",
+    "x": 12,
+    "expected": false
+  },
+  {
+    "test_name": "Negative Palindrome Candidate (-121)",
+    "x": -121,
+    "expected": false
+  },
+  {
+    "test_name": "Three Digits Palindrome (121)",
+    "x": 121,
+    "expected": true
+  },
+  {
+    "test_name": "Three Digits Not Palindrome (123)",
+    "x": 123,
+    "expected": false
+  },
+  {
+    "test_name": "Large Palindrome (123454321)",
+    "x": 123454321,
+    "expected": true
+  },
+  {
+    "test_name": "Large Palindrome (1001)",
+    "x": 1001,
+    "expected": true
+  },
+  {
+    "test_name": "Large Palindrome (99999)",
+    "x": 99999,
+    "expected": true
+  },
+  {
+    "test_name": "Large Palindrome (100001)",
+    "x": 100001,
+    "expected": true
+  },
+  {
+    "test_name": "Large Not Palindrome (123450)",
+    "x": 123450,
+    "expected": false
+  },
+  {
+    "test_name": "Not Palindrome Edge (10)",
+    "x": 10,
+    "expected": false
+  },
+  {
+    "test_name": "Palindrome (101)",
+    "x": 101,
+    "expected": true
+  },
+  {
+    "test_name": "Palindrome (202)",
+    "x": 202,
+    "expected": true
+  },
+  {
+    "test_name": "Palindrome (1221)",
+    "x": 1221,
+    "expected": true
+  },
+  {
+    "test_name": "Integer Min Value (-2147483648)",
+    "x": -2147483648,
+    "expected": false
+  },
+  {
+    "test_name": "Integer Max Value (2147483647)",
+    "x": 2147483647,
+    "expected": false
+  }
+]
