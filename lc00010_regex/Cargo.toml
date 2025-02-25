@@ -1,5 +1,5 @@
 [package]
-name = "lc00004_median_of_arrays"
+name = "lc00010_regex"
 version = "0.1.0"
 edition = "2021"
 

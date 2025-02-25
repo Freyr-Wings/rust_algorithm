@@ -1,12 +1,13 @@
-use lc00009_palindrome_number::is_palindrome;
+use lc00010_regex::is_match;
 use serde_json::Value;
 use basic_test_utilities::process_params;
 
 pub fn test_one(v: &Value) {
     let name = process_params!(v, "test_name", String);
     println!("Running test: {}", name);
-    let x = process_params!(v, "x", i32);
-    let result = is_palindrome(x);
+    let content = process_params!(v, "content", String);
+    let pattern = process_params!(v, "pattern", String);
+    let result = is_match(content, pattern);
     let expected = process_params!(v, "expected", bool);
     assert_eq!(result, expected);
 }

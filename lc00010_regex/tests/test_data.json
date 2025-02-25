@@ -1,0 +1,122 @@
+[
+  {
+    "test_name": "Exact Match",
+    "content": "abc",
+    "pattern": "abc",
+    "expected": true
+  },
+  {
+    "test_name": "Dot Wildcard",
+    "content": "abc",
+    "pattern": "a.c",
+    "expected": true
+  },
+  {
+    "test_name": "Star Wildcard Simple",
+    "content": "aa",
+    "pattern": "a*",
+    "expected": true
+  },
+  {
+    "test_name": "Star Wildcard Complex",
+    "content": "aab",
+    "pattern": "c*a*b",
+    "expected": true
+  },
+  {
+    "test_name": "Star With Dot",
+    "content": "mississippi",
+    "pattern": "mis*is*p*.",
+    "expected": false
+  },
+  {
+    "test_name": "Empty String Empty Pattern",
+    "content": "",
+    "pattern": "",
+    "expected": true
+  },
+  {
+    "test_name": "Empty String With Star",
+    "content": "",
+    "pattern": "a*",
+    "expected": true
+  },
+  {
+    "test_name": "Empty String Mismatched Pattern",
+    "content": "",
+    "pattern": "a",
+    "expected": false
+  },
+  {
+    "test_name": "Single Character Mismatch",
+    "content": "a",
+    "pattern": "b",
+    "expected": false
+  },
+  {
+    "test_name": "Multiple Star Groups",
+    "content": "mississippi",
+    "pattern": "mis*is*ip*.",
+    "expected": true
+  },
+  {
+    "test_name": "Trailing Star",
+    "content": "abcd",
+    "pattern": "abc*",
+    "expected": false
+  },
+  {
+    "test_name": "Greedy Star Matching",
+    "content": "aaaa",
+    "pattern": "a*a",
+    "expected": true
+  },
+  {
+    "test_name": "Star Cancelling Out Character",
+    "content": "abcd",
+    "pattern": "ab.*d",
+    "expected": true
+  },
+  {
+    "test_name": "Star Matching Multiple Characters",
+    "content": "abbbcd",
+    "pattern": "ab*cd",
+    "expected": true
+  },
+  {
+    "test_name": "Star Overmatching Characters",
+    "content": "abcd",
+    "pattern": ".*",
+    "expected": true
+  },
+  {
+    "test_name": "Complex Star and Dot Combination",
+    "content": "abcd",
+    "pattern": ".*d",
+    "expected": true
+  },
+  {
+    "test_name": "Pattern Longer Than String",
+    "content": "abc",
+    "pattern": "abcd",
+    "expected": false
+  },
+  {
+    "test_name": "String Longer Than Pattern Without Star",
+    "content": "abcd",
+    "pattern": "abc",
+    "expected": false
+  },
+  {
+    "test_name": "Star Not Affecting Match",
+    "content": "abc",
+    "pattern": "abcd*",
+    "expected": true
+  },
+  {
+    "test_name": "Star Eliminating Previous Character",
+    "content": "abbc",
+    "pattern": "ab*c",
+    "expected": true
+  }
+]

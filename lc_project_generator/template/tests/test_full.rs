@@ -1,10 +1,11 @@
 use serde_json::Value;
+use basic_test_utilities::process_params;
 
 pub fn test_one(v: &Value) {
-    let name = v["test_name"].as_str().unwrap();
+    let name = process_params!(v, "test_name", String);
     println!("Running test: {}", name);
-    let input = v["input"].as_str().unwrap();
-    let expected = v["expected"].as_str().unwrap();
+    let input = process_params!(v, "input", String);
+    let expected = process_params!(v, "expected", String);
     assert_eq!(input, expected);
 }
 

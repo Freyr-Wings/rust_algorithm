@@ -1,5 +1,57 @@
 use basic_data_structures::ListNode;
 
+
+#[macro_export]
+macro_rules! process_params {
+    ($dict:expr, $name:expr, $($type:tt)*) => {{
+        macro_rules! type_converter {
+            (String) => {
+                |val: &Value| -> String {
+                    val.as_str().unwrap().to_string()
+                }
+            };
+            (bool) => {
+                |val: &Value| -> bool {
+                    val.as_bool().unwrap()
+                }
+            };
+            (i32) => {
+                |val: &Value| -> i32 {
+                    val.as_i64().unwrap() as i32
+                }
+            };
+            (Vec < $inner:tt >) => {
+                |val: &Value| -> Vec<$inner> {
+                    val.as_array()
+                        .unwrap()
+                        .iter()
+                        .map(|v| {
+                            let converter = type_converter!($inner);
+                            converter(v)
+                        })
+                        .collect()
+                }
+            };
+            (HashMap < $k:tt, $v:tt >) => {
+                |val: &Value| -> std::collections::HashMap<$k, $v> {
+                    val.as_object()
+                        .unwrap()
+                        .iter()
+                        .map(|(key, value)| {
+                            let k_converter = type_converter!($k);
+                            let v_converter = type_converter!($v);
+                            (k_converter(key), v_converter(value))
+                        })
+                        .collect()
+                }
+            };
+        }
+
+        let converter = type_converter!($($type)*);
+        converter(&$dict[$name])
+    }};
+}
+
 pub fn list_to_nodes(nums: &Vec<i32>) -> Option<Box<ListNode>> {
     let mut head = None;
     let mut current = &mut head;
