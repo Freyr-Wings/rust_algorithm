@@ -1,0 +1,38 @@
+[
+  {
+    "test_name": "Minimum Input Size",
+    "height": [1, 1],
+    "expected": 1
+  },
+  {
+    "test_name": "All Elements Same",
+    "height": [5, 5, 5, 5, 5, 5, 5],
+    "expected": 30
+  },
+  {
+    "test_name": "Strictly Increasing",
+    "height": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+    "expected": 20
+  },
+  {
+    "test_name": "Strictly Decreasing",
+    "height": [9, 8, 7, 6, 5, 4, 3, 2, 1],
+    "expected": 20
+  },
+  {
+    "test_name": "Single Tallest Bar at Start",
+    "height": [10, 1, 1, 1, 1, 1, 1, 1],
+    "expected": 7
+  },
+  {
+    "test_name": "Single Tallest Bar at End",
+    "height": [1, 1, 1, 1, 1, 1, 1, 10],
+    "expected": 7
+  },
+  {
+    "test_name": "Multiple Peaks",
+    "height": [3, 1, 2, 5, 2, 4, 8, 3, 7, 9, 2],
+    "expected": 30
+  }
+]
+
