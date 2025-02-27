@@ -1,0 +1,97 @@
+[
+  {
+    "test_name": "Single Symbol - I",
+    "s": "I",
+    "expected": 1
+  },
+  {
+    "test_name": "Single Symbol - V",
+    "s": "V",
+    "expected": 5
+  },
+  {
+    "test_name": "Single Symbol - X",
+    "s": "X",
+    "expected": 10
+  },
+  {
+    "test_name": "Single Symbol - L",
+    "s": "L",
+    "expected": 50
+  },
+  {
+    "test_name": "Single Symbol - C",
+    "s": "C",
+    "expected": 100
+  },
+  {
+    "test_name": "Single Symbol - D",
+    "s": "D",
+    "expected": 500
+  },
+  {
+    "test_name": "Single Symbol - M",
+    "s": "M",
+    "expected": 1000
+  },
+  {
+    "test_name": "Simple Addition - II",
+    "s": "II",
+    "expected": 2
+  },
+  {
+    "test_name": "Simple Addition - III",
+    "s": "III",
+    "expected": 3
+  },
+  {
+    "test_name": "Subtraction Rule - IV",
+    "s": "IV",
+    "expected": 4
+  },
+  {
+    "test_name": "Subtraction Rule - IX",
+    "s": "IX",
+    "expected": 9
+  },
+  {
+    "test_name": "Mixed Addition and Subtraction - XLII",
+    "s": "XLII",
+    "expected": 42
+  },
+  {
+    "test_name": "Mixed Addition and Subtraction - XCIX",
+    "s": "XCIX",
+    "expected": 99
+  },
+  {
+    "test_name": "Mixed Addition and Subtraction - CDXLIV",
+    "s": "CDXLIV",
+    "expected": 444
+  },
+  {
+    "test_name": "Largest Number - MMMCMXCIX",
+    "s": "MMMCMXCIX",
+    "expected": 3999
+  },
+  {
+    "test_name": "Simple Number - LVIII",
+    "s": "LVIII",
+    "expected": 58
+  },
+  {
+    "test_name": "Simple Number - MCMXCIV",
+    "s": "MCMXCIV",
+    "expected": 1994
+  },
+  {
+    "test_name": "Complex Case - DCCCXLVIII",
+    "s": "DCCCXLVIII",
+    "expected": 848
+  },
+  {
+    "test_name": "Complex Case - MCMLXXXVI",
+    "s": "MCMLXXXVI",
+    "expected": 1986
+  }
+]
