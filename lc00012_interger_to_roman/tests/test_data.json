@@ -1,0 +1,98 @@
+[
+  {
+    "test_name": "Minimum Value",
+    "num": 1,
+    "expected": "I"
+  },
+  {
+    "test_name": "Single Symbol - V",
+    "num": 5,
+    "expected": "V"
+  },
+  {
+    "test_name": "Single Symbol - X",
+    "num": 10,
+    "expected": "X"
+  },
+  {
+    "test_name": "Single Symbol - L",
+    "num": 50,
+    "expected": "L"
+  },
+  {
+    "test_name": "Single Symbol - C",
+    "num": 100,
+    "expected": "C"
+  },
+  {
+    "test_name": "Single Symbol - D",
+    "num": 500,
+    "expected": "D"
+  },
+  {
+    "test_name": "Single Symbol - M",
+    "num": 1000,
+    "expected": "M"
+  },
+  {
+    "test_name": "Edge Case - Largest Roman Numeral",
+    "num": 3999,
+    "expected": "MMMCMXCIX"
+  },
+  {
+    "test_name": "Simple Two Symbol Number",
+    "num": 2,
+    "expected": "II"
+  },
+  {
+    "test_name": "Subtraction Notation - IV",
+    "num": 4,
+    "expected": "IV"
+  },
+  {
+    "test_name": "Subtraction Notation - IX",
+    "num": 9,
+    "expected": "IX"
+  },
+  {
+    "test_name": "Subtraction Notation - XL",
+    "num": 40,
+    "expected": "XL"
+  },
+  {
+    "test_name": "Subtraction Notation - XC",
+    "num": 90,
+    "expected": "XC"
+  },
+  {
+    "test_name": "Subtraction Notation - CD",
+    "num": 400,
+    "expected": "CD"
+  },
+  {
+    "test_name": "Subtraction Notation - CM",
+    "num": 900,
+    "expected": "CM"
+  },
+  {
+    "test_name": "Complex Number - 58",
+    "num": 58,
+    "expected": "LVIII"
+  },
+  {
+    "test_name": "Complex Number - 1994",
+    "num": 1994,
+    "expected": "MCMXCIV"
+  },
+  {
+    "test_name": "Complex Number - 2444",
+    "num": 2444,
+    "expected": "MMCDXLIV"
+  },
+  {
+    "test_name": "Complex Number - 3000",
+    "num": 3000,
+    "expected": "MMM"
+  }
+]
+
