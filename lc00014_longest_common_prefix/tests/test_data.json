@@ -1,0 +1,97 @@
+[
+  {
+    "test_name": "Sample",
+    "strs": ["input", "output"],
+    "expected": ""
+  },
+  {
+    "test_name": "Common Prefix",
+    "strs": ["flower", "flow", "flight"],
+    "expected": "fl"
+  },
+  {
+    "test_name": "Single Character Common Prefix",
+    "strs": ["a", "ab", "ac"],
+    "expected": "a"
+  },
+  {
+    "test_name": "Single String",
+    "strs": ["single"],
+    "expected": "single"
+  },
+  {
+    "test_name": "No Common Prefix",
+    "strs": ["dog", "racecar", "car"],
+    "expected": ""
+  },
+  {
+    "test_name": "All Identical Strings",
+    "strs": ["same", "same", "same"],
+    "expected": "same"
+  },
+  {
+    "test_name": "Empty String in List",
+    "strs": ["", "abc", "abcd"],
+    "expected": ""
+  },
+  {
+    "test_name": "All Strings Are Empty",
+    "strs": ["", "", ""],
+    "expected": ""
+  },
+  {
+    "test_name": "Case Sensitivity",
+    "strs": ["Test", "testing", "Tesla"],
+    "expected": ""
+  },
+  {
+    "test_name": "Mixed Case Strings",
+    "strs": ["abc", "ABC"],
+    "expected": ""
+  },
+  {
+    "test_name": "Numbers as Strings",
+    "strs": ["1234", "123", "12"],
+    "expected": "12"
+  },
+  {
+    "test_name": "Special Characters",
+    "strs": ["@home", "@hot", "@hotel"],
+    "expected": "@ho"
+  },
+  {
+    "test_name": "Unicode Characters",
+    "strs": ["你好", "你好世界", "你好人"],
+    "expected": "你好"
+  },
+  {
+    "test_name": "Long Strings",
+    "strs": ["aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"],
+    "expected": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  },
+  {
+    "test_name": "One Character Strings",
+    "strs": ["a", "b", "c"],
+    "expected": ""
+  },
+  {
+    "test_name": "One Character Same Strings",
+    "strs": ["x", "x", "x"],
+    "expected": "x"
+  },
+  {
+    "test_name": "Different Length Strings",
+    "strs": ["abc", "abcd", "abcde"],
+    "expected": "abc"
+  },
+  {
+    "test_name": "Whitespace Handling",
+    "strs": ["hello world", "hello", "hell"],
+    "expected": "hell"
+  },
+  {
+    "test_name": "Leading Spaces",
+    "strs": ["  space", "  spaceship", "  spa"],
+    "expected": "  spa"
+  }
+]
