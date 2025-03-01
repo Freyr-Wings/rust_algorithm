@@ -1,6 +1,7 @@
 use lc00014_longest_common_prefix::longest_common_prefix;
 use serde_json::Value;
-use basic_test_utilities::process_params;
+#[macro_use] extern crate basic_test_utilities;
+
 
 pub fn test_one(v: &Value) {
     let name = process_params!(v, "test_name", String);

@@ -1,6 +1,6 @@
 use lc00010_regex::is_match;
 use serde_json::Value;
-use basic_test_utilities::process_params;
+#[macro_use] extern crate basic_test_utilities;
 
 pub fn test_one(v: &Value) {
     let name = process_params!(v, "test_name", String);

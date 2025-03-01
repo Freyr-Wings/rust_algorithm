@@ -1,13 +1,13 @@
-use lc00013_roman_to_integer::roman_to_int;
+use lc00015_3_sum::three_sum;
 use serde_json::Value;
 #[macro_use] extern crate basic_test_utilities;
 
 pub fn test_one(v: &Value) {
     let name = process_params!(v, "test_name", String);
     println!("Running test: {}", name);
-    let input = process_params!(v, "s", String);
-    let expected = process_params!(v, "expected", i32);
-    let result = roman_to_int(input);
+    let nums = process_params!(v, "nums", Vec<i32>);
+    let expected = process_params!(v, "expected", Vec<Vec<i32>>);
+    let result= three_sum(nums);
     assert_eq!(result, expected);
 }
 
