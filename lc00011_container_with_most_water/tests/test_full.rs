@@ -1,13 +1,13 @@
 use lc00011_container_with_most_water::max_area;
 
 use serde_json::Value;
-#[macro_use] extern crate basic_test_utilities;
+use basic_test_macro::*;
 
 pub fn test_one(v: &Value) {
-    let name = process_params!(v, "test_name", String);
-    println!("Running test: {}", name);
-    let height = process_params!(v, "height", Vec<i32>);
-    let expected = process_params!(v, "expected", i32);
+    extract_data!(v, test_name, String);
+    println!("Running test: {}", test_name);
+    extract_data!(v, height, Vec<i32>);
+    extract_data!(v, expected, i32);
     let result = max_area(height);
     assert_eq!(result, expected);
 }

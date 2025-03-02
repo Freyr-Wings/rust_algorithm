@@ -1,13 +1,13 @@
 use lc00013_roman_to_integer::roman_to_int;
 use serde_json::Value;
-#[macro_use] extern crate basic_test_utilities;
+use basic_test_macro::*;
 
 pub fn test_one(v: &Value) {
-    let name = process_params!(v, "test_name", String);
-    println!("Running test: {}", name);
-    let input = process_params!(v, "s", String);
-    let expected = process_params!(v, "expected", i32);
-    let result = roman_to_int(input);
+    extract_data!(v, test_name, String);
+    println!("Running test: {}", test_name);
+    extract_data!(v, s, String);
+    extract_data!(v, expected, i32);
+    let result = roman_to_int(s);
     assert_eq!(result, expected);
 }
 

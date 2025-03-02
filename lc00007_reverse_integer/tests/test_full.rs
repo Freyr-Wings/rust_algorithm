@@ -2,8 +2,8 @@ use lc00007_reverse_integer::reverse;
 use serde_json::Value;
 
 pub fn test_one(v: &Value) {
-    let name = v["test_name"].as_str().unwrap();
-    println!("Running test: {}", name);
+    let test_name = v["test_name"].as_str().unwrap();
+    println!("Running test: {}", test_name);
     let input = v["input"].as_i64().unwrap() as i32;
     let expected = v["expected"].as_i64().unwrap() as i32;
     let result = reverse(input);

@@ -1,15 +1,14 @@
-use lc00004_median_of_arrays::*;
+use lc00017_letter_combination_of_phone::letter_combinations;
 use serde_json::Value;
 use basic_test_macro::*;
 
 pub fn test_one(v: &Value) {
     extract_data!(v, test_name, String);
     println!("Running test: {}", test_name);
-    extract_data!(v, nums1, Vec<i32>);
-    extract_data!(v, nums2, Vec<i32>);
-    let expected = v["expected"].as_f64().unwrap();
-    let result = find_median_sorted_arrays(nums1, nums2);
-    assert_eq!(result as f64, expected);
+    extract_data!(v, digits, String);
+    extract_data!(v, expected, Vec<String>);
+    let results = letter_combinations(digits);
+    assert_eq!(results, expected);
 }
 
 #[test]

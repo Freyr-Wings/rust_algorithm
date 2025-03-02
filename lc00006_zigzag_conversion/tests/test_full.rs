@@ -2,8 +2,8 @@ use lc00006_zigzag_conversion::*;
 use serde_json::Value;
 
 pub fn test_one(v: &Value) {
-    let name = v["test_name"].as_str().unwrap();
-    println!("Running test: {}", name);
+    let test_name = v["test_name"].as_str().unwrap();
+    println!("Running test: {}", test_name);
     let s = v["s"].as_str().unwrap();
     let num_rows = v["num_rows"].as_i64().unwrap();
     let expected = v["expected"].as_str().unwrap();

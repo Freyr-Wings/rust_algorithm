@@ -1,13 +1,13 @@
 use lc00009_palindrome_number::is_palindrome;
 use serde_json::Value;
-#[macro_use] extern crate basic_test_utilities;
+use basic_test_macro::*;
 
 pub fn test_one(v: &Value) {
-    let name = process_params!(v, "test_name", String);
-    println!("Running test: {}", name);
-    let x = process_params!(v, "x", i32);
+    extract_data!(v, test_name, String);
+    println!("Running test: {}", test_name);
+    extract_data!(v, x, i32);
     let result = is_palindrome(x);
-    let expected = process_params!(v, "expected", bool);
+    extract_data!(v, expected, bool);
     assert_eq!(result, expected);
 }
 

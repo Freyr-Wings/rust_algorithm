@@ -1,14 +1,14 @@
 use lc00010_regex::is_match;
 use serde_json::Value;
-#[macro_use] extern crate basic_test_utilities;
+use basic_test_macro::*;
 
 pub fn test_one(v: &Value) {
-    let name = process_params!(v, "test_name", String);
-    println!("Running test: {}", name);
-    let content = process_params!(v, "content", String);
-    let pattern = process_params!(v, "pattern", String);
+    extract_data!(v, test_name, String);
+    println!("Running test: {}", test_name);
+    extract_data!(v, content, String);
+    extract_data!(v, pattern, String);
     let result = is_match(content, pattern);
-    let expected = process_params!(v, "expected", bool);
+    extract_data!(v, expected, bool);
     assert_eq!(result, expected);
 }
 

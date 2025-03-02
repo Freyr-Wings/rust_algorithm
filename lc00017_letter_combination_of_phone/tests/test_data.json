@@ -1,0 +1,32 @@
+[
+  {
+    "test_name": "Single Digit",
+    "digits": "2",
+    "expected": ["a", "b", "c"]
+  },
+  {
+    "test_name": "Two Different Digits",
+    "digits": "79",
+    "expected": ["pw", "px", "py", "pz", "qw", "qx", "qy", "qz", "rw", "rx", "ry", "rz", "sw", "sx", "sy", "sz"]
+  },
+  {
+    "test_name": "Three Digits",
+    "digits": "223",
+    "expected": ["aad", "aae", "aaf", "abd", "abe", "abf", "acd", "ace", "acf", "bad", "bae", "baf", "bbd", "bbe", "bbf", "bcd", "bce", "bcf", "cad", "cae", "caf", "cbd", "cbe", "cbf", "ccd", "cce", "ccf"]
+  },
+  {
+    "test_name": "Only One Type of Digit",
+    "digits": "777",
+    "expected": ["ppp", "ppq", "ppr", "pps", "pqp", "pqq", "pqr", "pqs", "prp", "prq", "prr", "prs", "psp", "psq", "psr", "pss", "qpp", "qpq", "qpr", "qps", "qqp", "qqq", "qqr", "qqs", "qrp", "qrq", "qrr", "qrs", "qsp", "qsq", "qsr", "qss", "rpp", "rpq", "rpr", "rps", "rqp", "rqq", "rqr", "rqs", "rrp", "rrq", "rrr", "rrs", "rsp", "rsq", "rsr", "rss", "spp", "spq", "spr", "sps", "sqp", "sqq", "sqr", "sqs", "srp", "srq", "srr", "srs", "ssp", "ssq", "ssr", "sss"]
+  },
+  {
+    "test_name": "Empty Input",
+    "digits": "",
+    "expected": []
+  },
+  {
+    "test_name": "Large Input with Different Digits",
+    "digits": "563",
+    "expected": ["jmd", "jme", "jmf", "jnd", "jne", "jnf", "jod", "joe", "jof", "kmd", "kme", "kmf", "knd", "kne", "knf", "kod", "koe", "kof", "lmd", "lme", "lmf", "lnd", "lne", "lnf", "lod", "loe", "lof"]
+  }
+]

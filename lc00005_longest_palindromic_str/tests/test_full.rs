@@ -2,8 +2,8 @@ use lc00005_longest_palindromic_str::*;
 use serde_json::Value;
 
 pub fn test_one(v: &Value) {
-    let name = v["test_name"].as_str().unwrap();
-    println!("Running test: {}", name);
+    let test_name = v["test_name"].as_str().unwrap();
+    println!("Running test: {}", test_name);
     let s = serde_json::from_value(v["s"].clone()).unwrap();
     let expected = v["expected"].as_str().unwrap();
     let result = longest_palindrome(s);

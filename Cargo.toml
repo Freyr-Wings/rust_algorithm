@@ -1,11 +1,11 @@
 [workspace]
 members = [ 
-    "basic_data_structures", "basic_test_utilities",
+    "basic_data_structures", "basic_test_utilities", "basic_test_macro",
     "lc_project_generator",
     "lc00001_two_sum", 
     "lc00002_add_two_nums", 
     "lc00003_no_repeat_char", 
     "lc00004_median_of_arrays", 
-    "lc00005_longest_palindromic_str", "lc00006_zigzag_conversion", "lc00007_reverse_integer", "lc00008_string_to_integer", "lc00009_palindrome_number", "lc00010_regex", "lc00011_container_with_most_water", "lc00012_interger_to_roman", "lc00013_roman_to_integer", "lc00014_longest_common_prefix", "lc00015_3_sum",
+    "lc00005_longest_palindromic_str", "lc00006_zigzag_conversion", "lc00007_reverse_integer", "lc00008_string_to_integer", "lc00009_palindrome_number", "lc00010_regex", "lc00011_container_with_most_water", "lc00012_interger_to_roman", "lc00013_roman_to_integer", "lc00014_longest_common_prefix", "lc00015_3_sum", "lc00016_3_sum_closest", "lc00017_letter_combination_of_phone",
 ]
 resolver = "2"

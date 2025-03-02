@@ -1,15 +1,15 @@
-use lc00004_median_of_arrays::*;
+use lc00016_3_sum_closest::three_sum_closest;
 use serde_json::Value;
 use basic_test_macro::*;
 
 pub fn test_one(v: &Value) {
     extract_data!(v, test_name, String);
     println!("Running test: {}", test_name);
-    extract_data!(v, nums1, Vec<i32>);
-    extract_data!(v, nums2, Vec<i32>);
-    let expected = v["expected"].as_f64().unwrap();
-    let result = find_median_sorted_arrays(nums1, nums2);
-    assert_eq!(result as f64, expected);
+    extract_data!(v, nums, Vec<i32>);
+    extract_data!(v, target, i32);
+    extract_data!(v, expected, i32);
+    let result = three_sum_closest(nums, target);
+    assert_eq!(result, expected);
 }
 
 #[test]

@@ -1,13 +1,13 @@
 use lc00014_longest_common_prefix::longest_common_prefix;
 use serde_json::Value;
-#[macro_use] extern crate basic_test_utilities;
+use basic_test_macro::*;
 
 
 pub fn test_one(v: &Value) {
-    let name = process_params!(v, "test_name", String);
-    println!("Running test: {}", name);
-    let strs = process_params!(v, "strs", Vec<String>);
-    let expected = process_params!(v, "expected", String);
+    extract_data!(v, test_name, String);
+    println!("Running test: {}", test_name);
+    extract_data!(v, strs, Vec<String>);
+    extract_data!(v, expected, String);
     let result = longest_common_prefix(strs);
     assert_eq!(result, expected);
 }
