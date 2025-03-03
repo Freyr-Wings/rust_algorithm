@@ -7,7 +7,7 @@ pub fn test_one(v: &Value) {
     println!("Running test: {}", test_name);
     extract_data!(v, nums1, Vec<i32>);
     extract_data!(v, nums2, Vec<i32>);
-    let expected = v["expected"].as_f64().unwrap();
+    extract_data!(v, expected, f64);
     let result = find_median_sorted_arrays(nums1, nums2);
     assert_eq!(result as f64, expected);
 }

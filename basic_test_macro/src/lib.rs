@@ -46,10 +46,10 @@ pub fn type_converter(input_tokens: TokenStream) -> TokenStream {
                     }
                 }
             }
-            else if type_path.path.is_ident("f32") {
+            else if type_path.path.is_ident("f64") {
                 quote! {
-                    |val: &serde_json::Value| -> f32 {
-                        val.as_f64().unwrap() as f32
+                    |val: &serde_json::Value| -> f64 {
+                        val.as_f64().unwrap()
                     }
                 }
             }
@@ -125,10 +125,8 @@ pub fn type_converter(input_tokens: TokenStream) -> TokenStream {
 
 #[proc_macro]
 pub fn extract_data(input: TokenStream) -> TokenStream {
-    // Parse the input tokens: (json_value, var_name, desired_type)
     let JsonTestData { json_value, var_name, var_type } = parse_macro_input!(input as JsonTestData);
 
-    // Generate the final token stream with variable declaration
     let expanded = quote! {
         let converter = type_converter!(#var_type);
         let #var_name: #var_type = converter(&#json_value[stringify!(#var_name)]);
@@ -136,23 +134,3 @@ pub fn extract_data(input: TokenStream) -> TokenStream {
 
     TokenStream::from(expanded)
 }
-
-// pub fn list_to_nodes(nums: &Vec<i32>) -> Option<Box<ListNode>> {
-//     let mut head = None;
-//     let mut current = &mut head;
-//     for &num in nums {
-//         *current = Some(Box::new(ListNode::new(num)));
-//         current = &mut (*current).as_mut().unwrap().next;
-//     }
-//     head
-// }
-
-// pub fn nodes_to_list(mut node: &Option<Box<ListNode>>) -> Vec<i32> {
-//     let mut result = vec![];
-//     while node.is_some() {
-//         let cur_node = node.as_ref().unwrap();
-//         result.push(cur_node.val);
-//         node = &cur_node.next;
-//     }
-//     result
-// }
